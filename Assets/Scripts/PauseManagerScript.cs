@@ -15,16 +15,10 @@ public class PauseManagerScript : MonoBehaviour
         {
             if (!_isPaused)
             {
-                GetComponent<FirstPersonController>().enabled = false;
-                GetComponent<InteractionScript>().enabled = false;
-
                 Pause();
             }
             else
             {
-                GetComponent<FirstPersonController>().enabled = true;
-                GetComponent<InteractionScript>().enabled = true;
-
                 Unpause();
             }
         }
@@ -33,14 +27,23 @@ public class PauseManagerScript : MonoBehaviour
     public void Pause()
     {
         _isPaused = true;
+
+        GetComponent<FirstPersonController>().enabled = false;
+        GetComponent<InteractionScript>().enabled = false;
+
         Time.timeScale = 0f;
         Debug.Log("Game is paused");
     }
 
     public void Unpause()
     {
+
         _isPaused = false;
         Time.timeScale = 1f;
+
+        GetComponent<FirstPersonController>().enabled = true;
+        GetComponent<InteractionScript>().enabled = true;
+
         Debug.Log("Game is unpaused");
     }
 }
