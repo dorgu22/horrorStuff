@@ -6,7 +6,7 @@ public class PauseManagerScript : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
