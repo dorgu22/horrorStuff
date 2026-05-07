@@ -32,7 +32,6 @@ public class PauseManagerScript : MonoBehaviour
         GetComponent<InteractionScript>().enabled = false;
 
         Time.timeScale = 0f;
-        Debug.Log("Game is paused");
     }
 
     public void Unpause()
@@ -43,7 +42,5 @@ public class PauseManagerScript : MonoBehaviour
 
         GetComponent<FirstPersonController>().enabled = true;
         GetComponent<InteractionScript>().enabled = true;
-
-        Debug.Log("Game is unpaused");
     }
 }

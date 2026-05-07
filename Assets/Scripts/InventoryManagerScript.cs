@@ -17,11 +17,18 @@ public class InventoryManagerScript : MonoBehaviour, IInteractable
     {
         if (gameObject.tag == "Collectable")
         {
-            Debug.Log("COLLECT");
+            switch(gameObject.name)
+            {
+                case "TEST":
+                    Debug.Log("1488");
+                    break;
+                default:
+                    break;
+            }
         }
         else if (gameObject.tag == "Interactable")
         {
-            Debug.Log("INTERACT");
+            
         }
     }
 }
